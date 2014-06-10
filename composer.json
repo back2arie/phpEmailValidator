@@ -1,0 +1,21 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/back2arie/Phpjsondns"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/egulias/EmailValidator"
+        }
+    ],
+    "require": {
+        "php" : ">=5.3",
+        "rottingham/emailvalidator": "dev-master",
+        "back2arie/phpjsondns": "dev-master",
+        "egulias/email-validator": "dev-master"
+    },
+    "autoload": {
+        "classmap": [ "phpEmailValidator.php" ]
+    }
+}
