@@ -1,6 +1,7 @@
 <?php
 namespace phpEmailValidator;
 use EmailValidator\EmailValidator as EmailValidator;
+use SmtpLookup\SmtpLookup as SmtpLookup;
 use Phpjsondns\Phpjsondns as Phpjsondns;
 use Egulias\EmailValidator\EmailParser as EmailParser;
 use Egulias\EmailValidator\EmailLexer as EmailLexer;
@@ -22,6 +23,7 @@ class phpEmailValidator
     {
         $this->Phpjsondns = new Phpjsondns();
         $this->parser = new EmailParser(new EmailLexer());
+        $this->smtp = new SmtpLookup\SmtpLookup(array('sendFrom' => 'someone@gmail.com'));
     }
 
     /* Validate email address
@@ -49,7 +51,7 @@ class phpEmailValidator
             return FALSE;
         }
         // Step 3: SMTP check
-        if(!EmailValidator::exists($email))
+        if(!$this->smtp->lookup($email))
         {
             $this->setError('Cannot find SMTP account for '.$email);
             return FALSE;
