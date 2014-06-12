@@ -7,6 +7,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/egulias/EmailValidator"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/back2arie/EmailValidator"
         }
     ],
     "require": {
