@@ -1,7 +1,7 @@
 <?php
 namespace phpEmailValidator;
 use EmailValidator\EmailValidator as EmailValidator;
-use SmtpLookup\SmtpLookup as SmtpLookup;
+use EmailValidator\SmtpLookup as SmtpLookup;
 use Phpjsondns\Phpjsondns as Phpjsondns;
 use Egulias\EmailValidator\EmailParser as EmailParser;
 use Egulias\EmailValidator\EmailLexer as EmailLexer;
