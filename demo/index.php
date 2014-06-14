@@ -1,6 +1,8 @@
 <?php
+use phpEmailValidator\phpEmailValidator as phpEmailValidator;
 include_once(dirname(__FILE__).'/../phpEmailValidator.php');
 $result = '';
+$email = '';
 if($_POST)
 {
     $phpEmailValidator = new phpEmailValidator;
@@ -55,7 +57,7 @@ if($_POST)
                     <div class="col-lg-12">
                         <form method="post">
                             <div class="input-group input-group-lg">
-                                <input type="text" name="email" class="form-control" placeholder="example@domain.com">
+                                <input type="text" name="email" class="form-control" placeholder="example@domain.com" value="<?php echo $email;?>">
                                 <span class="input-group-btn">
                                     <button class="btn btn-danger" type="submit">Verify!</button>
                                 </span>
