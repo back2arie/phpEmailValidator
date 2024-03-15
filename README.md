@@ -2,6 +2,7 @@
 Complete email validation, can run as PHP library or HTTP services
 
 ### How it works
+
 The validation run on following steps, if one step fail, the next step will not be checked so it will be faster:
  1. Syntax check
  2. DNS (MX record) lookup 
