@@ -1,8 +1,8 @@
 pull_request_rules:
-  - name: "Automatic merge when CI passes and approved"
-    conditions:
-      - "#approved-reviews-by>=2"
-      - "check-success=your-ci-name"
-      - "base=main"
+  - name: Automatic merge when CI passes and approved
     actions:
-      merge:
+      merge: 
+    conditions:
+      - check-success=Codacy Static Code Analysis
+      - 'check-success=DeepSource: Python'
+      - base=master
